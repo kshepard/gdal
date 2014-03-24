@@ -55,8 +55,8 @@ ifeq ($(HAVE_LIBTOOL),yes)
 endif
 	ant
 
-install: generate
-	@echo "No installation to be done"
+install:
+	-cp *.so $(INST_LIB)
 
 JAVA_RUN = java -Djava.library.path=. -cp gdal.jar:build/apps
 
